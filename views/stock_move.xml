@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_stock_picking_get_shelfs_wizard" model="ir.ui.view">
+            <field name="name">stock.picking.view.shelf</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+                <xpath
+                    expr="//field[@name = 'move_ids_without_package']/tree/field[@name = 'product_uom']"
+                    position="after">
+<!-- 
+                    <field name="is_from_sale_purchase" column_invisible="True" />
+                    <field name="shelf_ids_domain" column_invisible="1" />
+                    <field name="sale_shelf_ids" ptional="hide" widget="many2many_tags"
+                        options="{'no_create': True, 'no_edit': True}"
+                        column_invisible="parent.picking_type_code == 'incoming'"
+                        readonly="is_from_sale_purchase"
+                        domain="shelf_ids_domain"
+                    />
+                    <field name="purchase_shelf_ids" ptional="hide" widget="many2many_tags"
+                        column_invisible="parent.picking_type_code == 'outgoing'"
+                        readonly="is_from_sale_purchase"
+                    /> -->
+                    <button string="Shelves" name='get_shelves' type="object" icon="fa-refresh" column_invisible="parent.state != 'done'" />
+
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
