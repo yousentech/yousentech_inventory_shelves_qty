@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* yousentech_inventory_shelves
+# 	* yousentech_inventory_shelves_qty
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20231112\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-29 09:47+0000\n"
-"PO-Revision-Date: 2024-05-29 13:01+0300\n"
+"POT-Creation-Date: 2025-08-31 11:34+0000\n"
+"PO-Revision-Date: 2025-08-31 14:37+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -16,296 +16,163 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
 "n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_product_shelf
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model,name:yousentech_inventory_shelves_qty.model_product_shelf
 msgid "Amount of product in the shelf"
-msgstr "كمية المنتج في الرف"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__existing_quantity
-msgid "Available Quantity"
-msgstr "الكمية المتوفرة"
-
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.sale_shelf_wizard_view_form
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.shelf_wizard_view_form
+#. module: yousentech_inventory_shelves_qty
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves_qty.shelf_wizard_view_form
 msgid "Cancel"
 msgstr "إلغاء"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_res_config_settings
-msgid "Config Settings"
-msgstr "تهيئة الإعدادات "
+#. module: yousentech_inventory_shelves_qty
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves_qty.shelf_wizard_view_form
+msgid "Confirm"
+msgstr "إعتماد"
 
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.actions.act_window,help:yousentech_inventory_shelves.product_shelf_action
-msgid "Create New Shelf"
-msgstr "إنشاء رف جديد"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__create_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__create_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__create_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__create_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__create_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__create_uid
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__create_uid
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__create_uid
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__create_uid
 msgid "Created by"
-msgstr "انشاء بواسطة"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__create_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__create_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__create_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__create_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__create_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__create_date
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__create_date
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__create_date
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__create_date
 msgid "Created on"
-msgstr "أنشئ في"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_res_config_settings__deal_with_product_shelf
-msgid "Dealing with Product Shelfs"
-msgstr "التعامل مع أرفف المنتجات"
-
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.checkup_res_config_settings_view_form
-msgid "Dealing with Shelves"
-msgstr "التعامل مع الارفف"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__display_name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__display_name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__display_name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__display_name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__display_name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__display_name
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__display_name
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__display_name
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__display_name
 msgid "Display Name"
-msgstr "الاسم"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_product__hide_shelf_field
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_template__hide_shelf_field
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_purchase_order__hide_shelf_field
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_order__hide_shelf_field
-msgid "Hide Shelf Field"
-msgstr "إخفاء حقل الرف"
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__existing_quantity
+msgid "Existing Quantity"
+msgstr "الكمية الحالية"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__id
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__id
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__id
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__write_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__write_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__write_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__write_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__write_uid
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__write_uid
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__write_uid
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__write_uid
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__write_uid
 msgid "Last Updated by"
-msgstr "تم التعديل بواسطة"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__write_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__write_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__write_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__write_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__write_date
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__write_date
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__write_date
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__write_date
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__write_date
 msgid "Last Updated on"
-msgstr "تم التعديل في"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__master_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__master_id
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__master_id
 msgid "Master"
 msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__sale_line_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__po_line_id
-msgid "Order Line"
-msgstr "تفاصيل الطلب"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_product_template
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__product_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__product_id
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model,name:yousentech_inventory_shelves_qty.model_product_template
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__product_id
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__product_tmpl_id
 msgid "Product"
 msgstr "المنتج"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.actions.act_window,name:yousentech_inventory_shelves.product_shelf_action
-#: model:ir.ui.menu,name:yousentech_inventory_shelves.product_shelf_info_menu
-msgid "Product Shelf"
-msgstr "ارفف المنتجات"
-
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.add_shelf_in_sale_order_line_form_view
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.new_filed_in_purchase_order_line_form_view
-msgid "Product Shelfs"
-msgstr "ارفف المنتجات"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_shelf
-msgid "Product shelf in the stock info"
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__product_tmpl_id
+msgid "Product Tmpl"
 msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.checkup_res_config_settings_view_form
-msgid "Product's Shelves"
-msgstr "ارفف المنتج"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_purchase_order
-msgid "Purchase Order"
-msgstr "أمر شراء"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_purchase_order_line
-msgid "Purchase Order Line"
-msgstr "بند أمر الشراء"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__quantity
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__quantity
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__quantity
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__quantity
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__quantity
 msgid "Quantity"
 msgstr "الكمية"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_sale_order
-msgid "Sales Order"
-msgstr "أمر البيع"
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__shelf_lines
+msgid "Shelf Lines"
+msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_sale_order_line
-msgid "Sales Order Line"
-msgstr "بند أمر المبيعات"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_purchase_order_line__shelf_ids
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_order_line__shelf_ids
-msgid "Shelf"
-msgstr "الرف"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__shelf_line
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_master__shelf_line
-msgid "Shelf Line"
-msgstr "تفاصيل الارفف"
-
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_product__shelf_ids
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_shelf__shelf_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_template__shelf_ids
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_detail__shelf_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_sale_shelf_wizard_master__product_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf__name
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_shelf_wizard_detail__shelf_id
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_shelf__shelf_id
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_detail__shelf_id
 msgid "Shelf Name"
 msgstr "اسم الرف"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_product__product_shelf_id
-#: model:ir.model.fields,field_description:yousentech_inventory_shelves.field_product_template__product_shelf_id
+#. module: yousentech_inventory_shelves_qty
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves_qty.add_shelfs_page_in_product_temlate_form_view
 msgid "Shelfs"
-msgstr "رفوف"
+msgstr "الأرفف"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.actions.act_window,name:yousentech_inventory_shelves.shelf_wizard_action
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.actions.act_window,name:yousentech_inventory_shelves_qty.shelf_wizard_action
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_product__product_shelf_ids
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_product_template__product_shelf_ids
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves_qty.view_stock_picking_get_shelfs_wizard
 msgid "Shelves"
-msgstr "الارفف"
+msgstr "الأرفف"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.actions.act_window,name:yousentech_inventory_shelves.sale_shelf_wizard_action
-msgid "Shelves "
-msgstr "الارفف"
+#. module: yousentech_inventory_shelves_qty
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves_qty.shelf_wizard_view_form
+msgid "Shelvs"
+msgstr "الأرفف"
 
-#. module: yousentech_inventory_shelves
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model,name:yousentech_inventory_shelves_qty.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model.fields,field_description:yousentech_inventory_shelves_qty.field_shelf_wizard_master__move_id
+msgid "Stock move"
+msgstr ""
+
+#. module: yousentech_inventory_shelves_qty
 #. odoo-python
-#: code:addons/yousentech_inventory_shelves/models/shelfs_wizard.py:0
-#, python-format
-msgid ""
-"The quantities distributed on the shelves are greater than the specified "
-"quantity."
-msgstr "الكميات الموزعة على الرفوف أكبر من الكمية المحددة."
-
-#. module: yousentech_inventory_shelves
-#. odoo-python
-#: code:addons/yousentech_inventory_shelves/models/shelfs_wizard.py:0
-#, python-format
-msgid ""
-"The quantities distributed on the shelves are smaller than the specified "
-"quantity."
-msgstr "الكميات الموزعة على الرفوف أقل من الكمية المحددة."
-
-#. module: yousentech_inventory_shelves
-#. odoo-python
-#: code:addons/yousentech_inventory_shelves/models/sale_shelf_wizard.py:0
+#: code:addons/yousentech_inventory_shelves_qty/models/shelfs_wizard.py:0
 #, python-format
 msgid ""
 "The quantities taken from the shelves are smaller than the specified "
 "quantity for the product"
-msgstr "الكميات المأخوذة من الرفوف أقل من الكمية المحددة للمنتج"
+msgstr "الكميات المأخوذة من الأرفف أقل من الكمية المحددة للمنتج"
 
-#. module: yousentech_inventory_shelves
+#. module: yousentech_inventory_shelves_qty
 #. odoo-python
-#: code:addons/yousentech_inventory_shelves/models/sale_shelf_wizard.py:0
-#, python-format
-msgid ""
-"The quantity demanded from the shelf is greater than the quantity available"
-msgstr "الكمية المطلوبة من الرف أكبر من الكمية المتوفرة"
-
-#. module: yousentech_inventory_shelves
-#. odoo-python
-#: code:addons/yousentech_inventory_shelves/models/sale_shelf_wizard.py:0
+#: code:addons/yousentech_inventory_shelves_qty/models/shelfs_wizard.py:0
 #, python-format
 msgid "The quantity is greater than the available"
-msgstr "الكمية اكبر من الكمية المتوفرة"
+msgstr "الكمية أكبر من الكمية المتوفرة"
 
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.sale_shelf_wizard_view_form
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.shelf_wizard_view_form
-msgid "confirm"
-msgstr "اعتماد"
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_sale_shelf_wizard_detail
-msgid "sale.shelf.wizard.detail"
-msgstr ""
+#. module: yousentech_inventory_shelves_qty
+#. odoo-python
+#: code:addons/yousentech_inventory_shelves_qty/models/shelfs_wizard.py:0
+#, python-format
+msgid "Not enough quantity for product in selected shelves. "
+msgstr "لا توجد كمية كافية للمنتج في الأرفف المحددة."
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_sale_shelf_wizard_master
-msgid "sale.shelf.wizard.master"
-msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_shelf_wizard_detail
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model,name:yousentech_inventory_shelves_qty.model_shelf_wizard_detail
 msgid "shelf.wizard.detail"
 msgstr ""
 
-#. module: yousentech_inventory_shelves
-#: model:ir.model,name:yousentech_inventory_shelves.model_shelf_wizard_master
+#. module: yousentech_inventory_shelves_qty
+#: model:ir.model,name:yousentech_inventory_shelves_qty.model_shelf_wizard_master
 msgid "shelf.wizard.master"
 msgstr ""
-
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.add_shelf_in_sale_order_line_form_view
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.add_shelfs_page_in_product_temlate_form_view
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.new_filed_in_purchase_order_line_form_view
-msgid "shelfs"
-msgstr "رفوف"
-
-#. module: yousentech_inventory_shelves
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.sale_shelf_wizard_view_form
-#: model_terms:ir.ui.view,arch_db:yousentech_inventory_shelves.shelf_wizard_view_form
-msgid "shelvs"
-msgstr "الارفف"
