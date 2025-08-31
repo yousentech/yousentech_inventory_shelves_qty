@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="sale_shelf_wizard_view_form" model="ir.ui.view">
+      <field name="name">sale.shelf.wizard.view.form</field>
+      <field name="model">sale.shelf.wizard.master</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="product_id" readonly="True"></field>
+              <field name="shelf_line">
+                <tree string="shelvs" editable="bottom" create="0">
+                  <field name="shelf_id" readonly="1" force_save="1"></field>
+                  <field name="existing_quantity" readonly="1" force_save="1"></field>
+                  <field name="quantity"></field>
+                </tree>
+              </field>
+            </group>
+            <footer>
+              <button string="confirm" name="confirm_shelf" type="object" class="btn-primary" />
+              <button string="Cancel" special="cancel"/>
+            </footer>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="sale_shelf_wizard_action" model="ir.actions.act_window">
+      <field name="name">Shelves </field>
+      <field name="res_model">sale.shelf.wizard.master</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="sale_shelf_wizard_view_form"/>
+      <field name="domain"></field>
+      <field name="target">new</field>
+      <field name="context">{}</field>
+    </record>
+  </data>
+</odoo>

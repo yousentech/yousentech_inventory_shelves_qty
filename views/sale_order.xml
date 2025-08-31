@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--  Add new filed 'shelf' in sale order line  -->
+        <record model="ir.ui.view" id="add_shelf_in_sale_order_line_form_view">
+            <field name="name">Add product shelf to sale order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']" position="attributes">
+                    <attribute name="readonly">state == 'sale'</attribute>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="hide_shelf_field" invisible="1"/>
+                </xpath>
+                <xpath expr="/form/sheet/notebook/page/field[@name='order_line']/tree/field[@name='tax_id']" position="after">
+                    <field name="shelf_ids_domain" column_invisible="1"/>
+
+                    <field name="shelf_ids" domain="shelf_ids_domain" optional="hide" widget="many2many_tags" column_invisible="parent.hide_shelf_field == True" options="{'no_create': True, 'no_edit': True}"></field>
+                    <!-- <button string="shelfs" name='get_shelfs' type="object" icon="fa-list-ul" title="Product Shelfs" column_invisible="parent.hide_shelf_field == True or parent.state not in ('sale')" /> -->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

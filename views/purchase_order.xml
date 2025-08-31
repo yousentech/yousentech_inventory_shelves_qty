@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="new_filed_in_purchase_order_line_form_view">
+            <field name="name">Add new filed to purchase order</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//field[@name='order_line']" position="after">
+                    <field name="hide_shelf_field" invisible='1'/>
+                </xpath>
+                <xpath expr="//field[@name='taxes_id']" position="after">
+                    <field name="shelf_ids" optional="hide" widget="many2many_tags" column_invisible="parent.hide_shelf_field == True"></field>
+                </xpath> -->
+                <xpath expr="//field[@name='price_subtotal']" position="after">
+                    <button string="shelfs" name='get_shelfs' type="object" icon="fa-list-ul" title="Product Shelfs" column_invisible="parent.hide_shelf_field == True or parent.state not in ('purchase')" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

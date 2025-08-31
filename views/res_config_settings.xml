@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id="checkup_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.model.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="yousentech_inventory.res_config_settings_inventory_formm"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/app[@name='yousentech_inventory']" position="inside">
+                    <h2>Dealing with Shelves</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box" title="">
+                            <div class="o_setting_left_pane">
+                                <field name="deal_with_product_shelf"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                 Product's Shelves  
+                                <div class=" text-muted mt16">
+                                    <label for="deal_with_product_shelf" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath> -->
+
+
+                <record id="config_settings_inherit_form_inventory" model="ir.ui.view">
+                    <field name="name">config.settings.inherit.form</field>
+                    <field name="model">res.config.settings</field>
+                    <field name="inherit_id" ref="yousentech_inventory.res_config_setting_inventory_formm" />
+                    <field name="arch" type="xml">
+
+                        <xpath  expr ="//app[@name ='yousentech_inventory']" position="inside">
+                            <h2>Dealing with Shelves</h2>
+                            <div class="row mt16 o_settings_container">
+                                <div class="col-12 col-lg-6 o_setting_box" title="">
+                                    <div class="o_setting_left_pane">
+                                        <field name="deal_with_product_shelf"/>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                             Product's Shelves  
+                                        <div class=" text-muted mt16">
+                                            <label for="deal_with_product_shelf" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </xpath>
+                    </field>
+                </record>
+            </data>
+        </odoo>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/app[@name='yousentech_inventory']" position="inside">
+                <h2>Dealing with Shelves</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="">
+                        <div class="o_setting_left_pane">
+                            <field name="deal_with_product_shelf"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                             Product's Shelves  
+                            <div class=" text-muted mt16">
+                                <label for="deal_with_product_shelf" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo> -->

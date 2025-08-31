@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="product_shelf_view_form" model="ir.ui.view">
+            <field name="name">product.shelf.view.form</field>
+            <field name="model">shelf</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_shelf_view_tree" model="ir.ui.view">
+            <field name="name">product.shelf.view.tree</field>
+            <field name="model">shelf</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="product_shelf_view_search" model="ir.ui.view">
+            <field name="name">product.shelf.view.search</field>
+            <field name="model">shelf</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"></field>
+                </search>
+            </field>
+        </record>
+        <record id="product_shelf_action" model="ir.actions.act_window">
+            <field name="name">Product Shelf</field>
+            <field name="res_model">shelf</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="product_shelf_view_tree"/>
+            <field name="domain"></field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>Create New Shelf</p>
+            </field>
+        </record>
+
+        <menuitem id="product_shelf_info_menu" name="Product Shelf"
+parent = "stock.menu_stock_config_settings" action= "product_shelf_action" sequence="50"/>
+
+    </data>
+</odoo>
