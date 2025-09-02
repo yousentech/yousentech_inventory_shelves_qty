@@ -163,12 +163,3 @@ class stock_move(models.Model):
     
     
 
-# class StockPicking(models.Model):
-#     _inherit = "stock.picking"
-
-#     def button_validate(self):
-#         res = super().button_validate()
-#         for picking in self.move_ids:
-#             return picking.get_shelves()
-            
-#         return res

@@ -9,12 +9,12 @@ class shelf_wizard_master(models.TransientModel):
     move_id = fields.Many2one("stock.move", string="Stock move")
     shelf_lines = fields.One2many("shelf.wizard.detail", "master_id")
     existing_quantity = fields.Float(string="Existing Quantity")
-
+    product_uom = fields.Many2one("uom.uom", string="Product UOM")
     @api.onchange("product_tmpl_id")
     def add_shelf_lines(self):
         for rec in self:
-            uom_factor = rec.move_id.get_uom_factor(rec.move_id.product_uom)
-            rec.existing_quantity = rec.move_id.quantity * uom_factor
+            rec.existing_quantity = rec.move_id.quantity 
+            rec.product_uom = rec.move_id.product_uom
             # add wizard lines
             shelf_line_ids = []
             for shelf in rec.move_id.shelf_ids:
@@ -28,17 +28,14 @@ class shelf_wizard_master(models.TransientModel):
             rec.shelf_lines = shelf_line_ids
 
     def confirm_shelf(self):
-        uom_factor = self.move_id.get_uom_factor(
-            self.move_id.purchase_line_id.product_uom if self.move_id.purchase_line_id 
-            else (self.move_id.sale_line_id.product_uom if self.move_id.sale_line_id 
-                else self.move_id.product_uom))
+        uom_factor = self.move_id.get_uom_factor(self.move_id.product_uom)
         
         qty = sum(rec.quantity for rec in self.shelf_lines) * uom_factor
-        if qty  > self.existing_quantity :
+        if qty > self.move_id.quantity * uom_factor:
             # "الكميات المأخوذة من الأرفف أكبر من الكمية المحددة"
             raise ValidationError( _("The quantity is greater than the available"))
 
-        if qty  < self.existing_quantity :
+        if qty < self.move_id.quantity * uom_factor :
             # "الكميات المأخوذة من الأرفف أصغر من الكمية المحددة"
             raise ValidationError(_("The quantities taken from the shelves are smaller than the specified quantity for the product"))
    
@@ -50,20 +47,18 @@ class shelf_wizard_master(models.TransientModel):
                 if available_qty < rec.quantity * uom_factor:
                     raise ValidationError(_(f"Not enough quantity for product {self.move_id.product_id.product_tmpl_id.name} in selected shelves. "
                         f"Available: {available_qty}, Required: {rec.quantity * uom_factor}"))
-                # self.move_id._update_shelf_quantities_sales(rec.quantity)
+               
                 shelfs_in_product = self.env["product.shelf"].search([("product_tmpl_id", "=", self.product_tmpl_id.id)])
                 if rec.quantity :
-                        exit_shelf = shelfs_in_product.search([("shelf_id", "=", rec.shelf_id.id)])
+                        exit_shelf = shelfs_in_product.search([("shelf_id", "=", rec.shelf_id.id),("product_tmpl_id", "=", self.product_tmpl_id.id)])
                         if exit_shelf.quantity >= rec.quantity * uom_factor:
                             exit_shelf.quantity -= rec.quantity * uom_factor
 
 
             if self.move_id.picking_id.picking_type_code == 'incoming' and self.shelf_lines or self.move_id.picking_id.picking_type_code == 'incoming' and self.move_id.picking_id.return_id:
-                # self.move_id._update_shelf_quantities_purchase(rec.quantity)
-                shelfs_in_product = self.env["product.shelf"].search(
-                    [("product_tmpl_id", "=", self.product_tmpl_id.id)])
+                shelfs_in_product = self.env["product.shelf"].search([("product_tmpl_id", "=", self.product_tmpl_id.id)])
                 if rec.shelf_id.id in shelfs_in_product.shelf_id.ids:
-                    exit_shelf = shelfs_in_product.search([("shelf_id", "=", rec.shelf_id.id)])
+                    exit_shelf = shelfs_in_product.search([("shelf_id", "=", rec.shelf_id.id),("product_tmpl_id", "=", self.product_tmpl_id.id)])
                     exit_shelf.write({"quantity": exit_shelf.quantity + rec.quantity * uom_factor})
                 else:
                     self.env["product.shelf"].create(
