@@ -17,4 +17,4 @@ class product_template(models.Model):
     #         else:
     #             rec.hide_shelf_field = True
     #######################################################           
-    product_shelf_ids = fields.One2many("product.shelf", "product_tmpl_id", string="Shelves")
+    # product_shelf_ids = fields.One2many("product.shelf", "product_tmpl_id", string="Shelves")

@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_product_shelf,product_shelf,model_product_shelf,,1,1,1,1,
 
 access_shelf_wizard_master,shelf_wizard_master,model_shelf_wizard_master,,1,1,1,1,
 access_shelf_wizard_detail,shelf_wizard_detail,model_shelf_wizard_detail,,1,1,1,1,
