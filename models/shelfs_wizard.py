@@ -45,8 +45,7 @@ class shelf_wizard_master(models.TransientModel):
                 available_qty = self.move_id._get_available_shelf_quantity(
                     self.move_id.product_id.product_tmpl_id,rec.shelf_id)
                 if available_qty < rec.quantity * uom_factor:
-                    raise ValidationError(_(f"Not enough quantity for product {self.move_id.product_id.product_tmpl_id.name} in selected shelves. "
-                        f"Available: {available_qty}, Required: {rec.quantity * uom_factor}"))
+                    raise ValidationError(_("Not enough quantity for this product in selected shelves."))
                
                 shelfs_in_product = self.env["product.shelf"].search([("product_tmpl_id", "=", self.product_tmpl_id.id)])
                 if rec.quantity :
